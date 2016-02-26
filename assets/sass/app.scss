@@ -1,0 +1,291 @@
+$body-bg: #40d47e;
+$pomegranate: #e74c3c;
+$peter-river: #3498db;
+$carrot: #e67e22;
+$green-sea: #16a085;
+$violet: #9b59b6;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $body-bg;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.splash, .page {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.page .header {
+    width: 90%;
+}
+
+.menu {
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+
+        & li {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            margin: 30px 0 30px 0;
+            
+            &.active a {
+                border-width: 10px;
+                margin-bottom: 0;
+                background-color: darken($body-bg, 5%);
+            }
+            & a {
+                transition: all 0.5s;
+                color: #fff;
+                border-bottom: 5px solid #9b59b6;
+                display: block;
+                padding: 15px 10px 5px 10px;
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+
+                &:hover {
+                    border-width: 10px;
+                    margin-bottom: 0;
+                    background-color: darken($body-bg, 10%);
+                }
+
+            }
+                &:first-child a {
+                    border-color: $pomegranate;
+                }
+
+                &:nth-child(3) a {
+                    border-color: $peter-river;
+                }
+
+                &:nth-child(4) a {
+                    border-color: $carrot;
+                }
+
+                &:nth-child(5) a {
+                    border-color: $green-sea;
+                }
+        }
+    }
+}
+.head {
+    text-align: center;
+    align-self: center;
+
+    & h1 {
+        margin-bottom: -10px;
+        font-size: 5rem;
+    }
+
+    & h2 {
+        font-size: 1.7rem;
+    }
+
+    padding-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.head h1, .head h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    sup {
+        text-decoration: underline;
+        font-size: 1.2rem;
+    }
+}
+
+@mixin title-image($image, $color) {
+    border-bottom: 3px solid $color;
+    background-image: linear-gradient(to top, fade-out(#000, 0.6),  fade-out(#000, 0.6)),
+                      url($image);
+        
+    &:hover {
+        background-image: url($image);
+    }
+}
+
+.title-box {
+    width: 100%;
+    min-height: 450px;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid darken($body-bg, 10%);
+
+    & h1 {
+        color: #fff;
+        font-size: 5rem;
+    }
+
+    &.location {
+        @include title-image("../images/ort-banner2.jpg", $pomegranate);
+    }
+
+    &.entrance {
+        @include title-image("../images/eintritt2.jpg", $violet);
+    }
+
+    &.exhibitors {
+        @include title-image("../images/eintritt.jpg", $peter-river);
+    }
+}
+
+.content {
+    text-align: center;
+    width: 100%;
+}
+
+.page .content {
+    margin: 0 0 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    font-family: 'Open Sans';
+    text-align: left;
+    min-height: 300px;
+    color: #333;
+    display: flex;
+
+    a {
+        text-decoration: none;
+        color: #2980b9;
+        font-style: normal;
+        border-bottom: 1px solid #2980b9;
+
+        transition: all 0.5s;
+
+        &:hover {
+            border-width: 3px;
+        }
+    }
+}
+
+.page .content h1 {
+    color: $pomegranate;
+}
+
+.content-col {
+    flex: 1;
+}
+
+.map-col {
+    flex: 1;
+    width: 30%;
+}
+
+#map {
+    min-height: 400px;
+    height: 100%;
+    width: 100%;
+}
+
+.address-box, .bus-box {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    /*background: $pomegranate;*/
+
+    .fa-car, .fa-bus {
+        font-size: 4rem;
+    }
+
+    .addr {
+        margin-left: 10px;
+        flex: 2;
+    }
+}
+
+.address-box {
+    align-items: center;
+}
+
+hr {
+    margin: 10px;
+    border: 1px solid #ecf0f1;
+}
+
+p {
+    margin: 5px 5px 10px 10px;
+}
+
+.exhibitor-list {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    li {
+        margin: 10px;
+        flex-basis: 320px;
+        border: 1px solid #ecf0f1;
+        border-radius: 5px;
+        padding: 10px;
+        
+        p {
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+    }
+}
+
+.teaser_image {
+    width: 60%;
+}
+
+.footer {
+    width: 100%;
+
+    .organizer {
+        display: flex;
+        align-items: center;
+    }
+    .organizer h3 {
+        margin-left: 10px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    .organizer a {
+        color: #fff;
+        text-decoration: none;
+    }
+}

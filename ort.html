@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orchideen Berlin 2016</title>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+        <div class="head"><a href="/"><h1>Orchideen</h1><h2>Berlin-Dahlem, 16. - 18. Sept. 2016</h2></a></div>
+        <div class="menu">
+            <ul>
+                <li class="active"><a href="ort.html">Ort</a></li>
+                <li><a href="eintritt.html">Eintritt</a></li>
+                <li><a href="aussteller.html">Aussteller</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="presse.html">Presse</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="title-box location">
+            <!--<img src="public/images/ort-banner2.jpg" style="width: 100%;" alt="">-->
+            <h1>Ort</h1>
+        </div>
+        <div class="content">
+           <div class="content-col">
+               <p>Die Ausstellung findet im Neuen Glashaus des Botanischen Garten Berlins statt.</p>
+               
+               <p>Der Botanische Garten Berlin liegt im Süden von Berlin, im Ortsteil Dahlem. Sie erreichen ihn bequem mit Bus und Bahn oder natürlich mit dem Auto.</p>
+               <hr>
+               <h3>Adresse für Navigationssysteme</h3>
+               <div class="address-box">
+                   <i class="fa fa-car"></i>
+                   <div class="addr">
+                       <p><strong>Botanischer Garten Berlin-Dahlem</strong><br>Königin-Luise-Str. 6-8<br>14195 Berlin</p>
+                   </div>
+               </div>
+
+               <hr>
+
+               <h3>Anfahrt mit Bus und Bahn</h3>
+               <div class="bus-box">
+                   <i class="fa fa-bus"></i>
+                   <div class="addr">
+                       <p>Die S-Bahn-Linie <strong>S1</strong> hat eine Station "Botanischer Garten", von der aus Sie schnell am Eingang zum Botanischen Garten sind.</p>
+                       <p>Die U-Bahn-Linie <strong>U9</strong> endet am U-Bhf. Rathaus Steglitz. Steigen Sie dort in den <strong>X83</strong> in Richtung Königin-Luise-Str./Clayallee bzw. U-Bhf. Dahlem-Dorf und fahren bis zur Station Königin-Luise-Str./Botanischer Garten.</p>
+                       <p>Mit der U-Bahn-Linie <strong>U3</strong> können Sie bis zum U-Bhf. Dahlem-Dorf fahren und dort mit dem <strong>X83</strong> in Richtung Lichtenrade Nahariyastraße bzw. Marienfelde Nahmitzer Damm. Steigen Sie an der Haltestelle Königin-Luise-Str./Botanischer Garten aus.</p>
+                       <p>Des Weiteren halten die Buslinien <strong>M48</strong> und <strong>101</strong> am Botanischen Garten.</p>
+                   </div>
+               </div>
+           </div>
+           <div class="map-col">
+               <div id="map"></div>
+           </div>
+        </div>
+        <div class="footer">
+            <div class="organizer"><img src="public/images/dog-logo.png" width="150px"><h3><a href="http://orchidee.de">Deutsche Orchideen-<br>Gesellschaft e.V.</a><br><a href="http://orchidee-berlin.de">Gruppe Berlin</a></h3></div>
+        </div>
+    </div>
+    <script>
+        var map;
+
+        function initMap() {
+            var coords = {lat: 52.455825, lng: 13.308462}
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: coords,
+                zoom: 14
+            });
+
+            var contentString = '<div id="content"><h3>Neues Glashaus</h3><p>Das neue Glashaus ist von beiden Eingängen des Botanischen Gartens schnell zu erreichen. Folgen Sie den aufgestellten Wegweisern, um auf schnellstem Wege zur Ausstellung zu gelangen.</p></div>';
+
+            var infowindow = new google.maps.InfoWindow({ content: contentString });
+
+            var marker = new google.maps.Marker({
+                position: coords,
+                label: "A",
+                title: "Neues Glashaus - Botanischer Garten Berlin",
+                map: map
+            });
+
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzl4UoBN37EEDhR3lApwlWIjPP_ri2y4w&callback=initMap">
+    </script>
+</body>
+</html>

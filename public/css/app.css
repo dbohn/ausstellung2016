@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #40d47e;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.splash, .page {
+  width: 90%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.page {
+  width: 100%; }
+
+.header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 100%; }
+  .header a {
+    text-decoration: none; }
+
+.page .header {
+  width: 90%; }
+
+.menu ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .menu ul li {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin: 30px 0 30px 0; }
+    .menu ul li.active a {
+      border-width: 10px;
+      margin-bottom: 0;
+      background-color: #2ecc70; }
+    .menu ul li a {
+      transition: all 0.5s;
+      color: #fff;
+      border-bottom: 5px solid #9b59b6;
+      display: block;
+      padding: 15px 10px 5px 10px;
+      font-size: 1.1rem;
+      margin-bottom: 10px; }
+      .menu ul li a:hover {
+        border-width: 10px;
+        margin-bottom: 0;
+        background-color: #29b865; }
+    .menu ul li:first-child a {
+      border-color: #e74c3c; }
+    .menu ul li:nth-child(3) a {
+      border-color: #3498db; }
+    .menu ul li:nth-child(4) a {
+      border-color: #e67e22; }
+    .menu ul li:nth-child(5) a {
+      border-color: #16a085; }
+
+.head {
+  text-align: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding-bottom: 10px; }
+  .head h1 {
+    margin-bottom: -10px;
+    font-size: 5rem; }
+  .head h2 {
+    font-size: 1.7rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.head h1, .head h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal; }
+  .head h1 sup, .head h2 sup {
+    text-decoration: underline;
+    font-size: 1.2rem; }
+
+.title-box {
+  width: 100%;
+  min-height: 450px;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-top: 1px solid #29b865; }
+  .title-box h1 {
+    color: #fff;
+    font-size: 5rem; }
+  .title-box.location {
+    border-bottom: 3px solid #e74c3c;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/ort-banner2.jpg"); }
+    .title-box.location:hover {
+      background-image: url("../images/ort-banner2.jpg"); }
+  .title-box.entrance {
+    border-bottom: 3px solid #9b59b6;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt2.jpg"); }
+    .title-box.entrance:hover {
+      background-image: url("../images/eintritt2.jpg"); }
+  .title-box.exhibitors {
+    border-bottom: 3px solid #3498db;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt.jpg"); }
+    .title-box.exhibitors:hover {
+      background-image: url("../images/eintritt.jpg"); }
+
+.content {
+  text-align: center;
+  width: 100%; }
+
+.page .content {
+  margin: 0 0 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  font-family: 'Open Sans';
+  text-align: left;
+  min-height: 300px;
+  color: #333;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .page .content a {
+    text-decoration: none;
+    color: #2980b9;
+    font-style: normal;
+    border-bottom: 1px solid #2980b9;
+    transition: all 0.5s; }
+    .page .content a:hover {
+      border-width: 3px; }
+
+.page .content h1 {
+  color: #e74c3c; }
+
+.content-col {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.map-col {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 30%; }
+
+#map {
+  min-height: 400px;
+  height: 100%;
+  width: 100%; }
+
+.address-box, .bus-box {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  /*background: $pomegranate;*/ }
+  .address-box .fa-car, .address-box .fa-bus, .bus-box .fa-car, .bus-box .fa-bus {
+    font-size: 4rem; }
+  .address-box .addr, .bus-box .addr {
+    margin-left: 10px;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2; }
+
+.address-box {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+hr {
+  margin: 10px;
+  border: 1px solid #ecf0f1; }
+
+p {
+  margin: 5px 5px 10px 10px; }
+
+.exhibitor-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .exhibitor-list li {
+    margin: 10px;
+    -webkit-flex-basis: 320px;
+    -ms-flex-preferred-size: 320px;
+    flex-basis: 320px;
+    border: 1px solid #ecf0f1;
+    border-radius: 5px;
+    padding: 10px; }
+    .exhibitor-list li p {
+      font-size: 0.9rem;
+      font-style: italic; }
+
+.teaser_image {
+  width: 60%; }
+
+.footer {
+  width: 100%; }
+  .footer .organizer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer .organizer h3 {
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal; }
+  .footer .organizer a {
+    color: #fff;
+    text-decoration: none; }
+
+/*# sourceMappingURL=app.css.map */
