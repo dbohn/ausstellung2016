@@ -25,6 +25,10 @@ body {
     align-items: center;
 }
 
+.splash .content h1 {
+    color: #fff;
+}
+
 .page {
     width: 100%;
 }
@@ -53,7 +57,7 @@ body {
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             margin: 30px 0 30px 0;
-            
+
             &.active a {
                 border-width: 10px;
                 margin-bottom: 0;
@@ -75,7 +79,7 @@ body {
                 }
 
             }
-                &:first-child a {
+                &:nth-child(2) a {
                     border-color: $pomegranate;
                 }
 
@@ -131,7 +135,9 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 3px solid $color;
     background-image: linear-gradient(to top, fade-out(#000, 0.6),  fade-out(#000, 0.6)),
                       url($image);
-        
+
+    background-position: center;
+
     &:hover {
         background-image: url($image);
     }
@@ -163,6 +169,10 @@ h1, h2, h3, h4, h5, h6 {
 
     &.exhibitors {
         @include title-image("../images/eintritt.jpg", $peter-river);
+    }
+
+    &.gallery {
+        @include title-image("../images/gallery.jpg", $carrot);
     }
 }
 
@@ -203,6 +213,25 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
 }
 
+.costs {
+    margin: 10px;
+    dt {
+        font-size: 1.2rem;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+    }
+
+    dd {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.opening {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
 .map-col {
     flex: 1;
     width: 30%;
@@ -233,6 +262,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.bus-box {
+    strong.opnv {
+        color: #fff;
+        background: $peter-river;
+        padding: 2px 8px;
+        //border-radius: 10px;
+        font-weight: normal;
+    }
+}
+
 .address-box {
     align-items: center;
 }
@@ -247,6 +286,7 @@ p {
 }
 
 .exhibitor-list {
+    margin-bottom: 20px;
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
@@ -255,13 +295,21 @@ p {
     li {
         margin: 10px;
         flex-basis: 320px;
-        border: 1px solid #ecf0f1;
+        border: 1px solid darken(#ecf0f1, 10%);
         border-radius: 5px;
         padding: 10px;
-        
+
         p {
             font-size: 0.9rem;
             font-style: italic;
+        }
+
+        .gardener {
+            color: $pomegranate;
+        }
+
+        .tools {
+            color: $violet;
         }
     }
 }

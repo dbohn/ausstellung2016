@@ -25,6 +25,9 @@ body {
   -ms-flex-align: center;
   align-items: center; }
 
+.splash .content h1 {
+  color: #fff; }
+
 .page {
   width: 100%; }
 
@@ -70,7 +73,7 @@ body {
         border-width: 10px;
         margin-bottom: 0;
         background-color: #29b865; }
-    .menu ul li:first-child a {
+    .menu ul li:nth-child(2) a {
       border-color: #e74c3c; }
     .menu ul li:nth-child(3) a {
       border-color: #3498db; }
@@ -124,19 +127,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 5rem; }
   .title-box.location {
     border-bottom: 3px solid #e74c3c;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/ort-banner2.jpg"); }
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/ort-banner2.jpg");
+    background-position: center; }
     .title-box.location:hover {
       background-image: url("../images/ort-banner2.jpg"); }
   .title-box.entrance {
     border-bottom: 3px solid #9b59b6;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt2.jpg"); }
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt2.jpg");
+    background-position: center; }
     .title-box.entrance:hover {
       background-image: url("../images/eintritt2.jpg"); }
   .title-box.exhibitors {
     border-bottom: 3px solid #3498db;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt.jpg"); }
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt.jpg");
+    background-position: center; }
     .title-box.exhibitors:hover {
       background-image: url("../images/eintritt.jpg"); }
+  .title-box.gallery {
+    border-bottom: 3px solid #e67e22;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/gallery.jpg");
+    background-position: center; }
+    .title-box.gallery:hover {
+      background-image: url("../images/gallery.jpg"); }
 
 .content {
   text-align: center;
@@ -170,6 +182,20 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex: 1;
   flex: 1; }
 
+.costs {
+  margin: 10px; }
+  .costs dt {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase; }
+  .costs dd {
+    margin-left: 10px;
+    margin-bottom: 10px; }
+
+.opening {
+  font-size: 1.3rem;
+  margin-bottom: 20px; }
+
 .map-col {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -200,6 +226,12 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex: 2;
     flex: 2; }
 
+.bus-box strong.opnv {
+  color: #fff;
+  background: #3498db;
+  padding: 2px 8px;
+  font-weight: normal; }
+
 .address-box {
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -213,6 +245,7 @@ p {
   margin: 5px 5px 10px 10px; }
 
 .exhibitor-list {
+  margin-bottom: 20px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -228,12 +261,16 @@ p {
     -webkit-flex-basis: 320px;
     -ms-flex-preferred-size: 320px;
     flex-basis: 320px;
-    border: 1px solid #ecf0f1;
+    border: 1px solid #cfd9db;
     border-radius: 5px;
     padding: 10px; }
     .exhibitor-list li p {
       font-size: 0.9rem;
       font-style: italic; }
+    .exhibitor-list li .gardener {
+      color: #e74c3c; }
+    .exhibitor-list li .tools {
+      color: #9b59b6; }
 
 .teaser_image {
   width: 60%; }
