@@ -137,10 +137,6 @@ h1, h2, h3, h4, h5, h6 {
                       url($image);
 
     background-position: center;
-
-    &:hover {
-        background-image: url($image);
-    }
 }
 
 .title-box {
@@ -159,6 +155,10 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 5rem;
     }
 
+    &:hover {
+        background-size: 0%, cover;
+    }
+
     &.location {
         @include title-image("../images/ort-banner2.jpg", $pomegranate);
     }
@@ -173,6 +173,10 @@ h1, h2, h3, h4, h5, h6 {
 
     &.gallery {
         @include title-image("../images/gallery.jpg", $carrot);
+    }
+
+    &.press {
+        @include title-image("../images/presse.jpg", $green-sea);
     }
 }
 

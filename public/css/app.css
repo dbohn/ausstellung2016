@@ -125,30 +125,28 @@ h1, h2, h3, h4, h5, h6 {
   .title-box h1 {
     color: #fff;
     font-size: 5rem; }
+  .title-box:hover {
+    background-size: 0%, cover; }
   .title-box.location {
     border-bottom: 3px solid #e74c3c;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/ort-banner2.jpg");
     background-position: center; }
-    .title-box.location:hover {
-      background-image: url("../images/ort-banner2.jpg"); }
   .title-box.entrance {
     border-bottom: 3px solid #9b59b6;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt2.jpg");
     background-position: center; }
-    .title-box.entrance:hover {
-      background-image: url("../images/eintritt2.jpg"); }
   .title-box.exhibitors {
     border-bottom: 3px solid #3498db;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/eintritt.jpg");
     background-position: center; }
-    .title-box.exhibitors:hover {
-      background-image: url("../images/eintritt.jpg"); }
   .title-box.gallery {
     border-bottom: 3px solid #e67e22;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/gallery.jpg");
     background-position: center; }
-    .title-box.gallery:hover {
-      background-image: url("../images/gallery.jpg"); }
+  .title-box.press {
+    border-bottom: 3px solid #16a085;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/presse.jpg");
+    background-position: center; }
 
 .content {
   text-align: center;
