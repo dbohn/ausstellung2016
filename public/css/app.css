@@ -14,7 +14,7 @@ body {
   justify-content: center; }
 
 .splash, .page {
-  width: 90%;
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +31,10 @@ body {
 .page {
   width: 100%; }
 
+@media all and (max-width: 500px) {
+  .splash {
+    width: 100%; } }
+
 .header {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,9 +45,14 @@ body {
   width: 100%; }
   .header a {
     text-decoration: none; }
+  @media all and (max-width: 950px) {
+    .header {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .page .header {
-  width: 90%; }
+  width: 100%; }
 
 .menu ul {
   display: -webkit-flex;
@@ -65,6 +74,7 @@ body {
       transition: all 0.5s;
       color: #fff;
       border-bottom: 5px solid #9b59b6;
+      border-color: #9b59b6;
       display: block;
       padding: 15px 10px 5px 10px;
       font-size: 1.1rem;
@@ -81,6 +91,28 @@ body {
       border-color: #e67e22; }
     .menu ul li:nth-child(5) a {
       border-color: #16a085; }
+  @media all and (max-width: 500px) {
+    .menu ul {
+      display: block; }
+    .menu ul li {
+      margin-bottom: 0;
+      margin-top: 0; }
+    .menu ul li a {
+      margin-bottom: 0;
+      border-left-width: 3px;
+      border-left-style: solid;
+      border-bottom-width: 0px;
+      padding: 5px 10px 5px 10px; }
+    .menu ul li.active a, .menu ul li a:hover {
+      border-width: 4px;
+      border-bottom-width: 0px; } }
+  @media all and (min-width: 501px) and (max-width: 950px) {
+    .menu ul {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .menu ul li {
+      margin: 15px 0; } }
 
 .head {
   text-align: center;
@@ -93,6 +125,11 @@ body {
     font-size: 5rem; }
   .head h2 {
     font-size: 1.7rem; }
+  @media all and (max-width: 500px) {
+    .head h1 {
+      font-size: 3rem; }
+    .head h2 {
+      font-size: 1.2rem; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -101,9 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .head h1, .head h2 {
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: normal; }
+  color: #fff; }
   .head h1 sup, .head h2 sup {
     text-decoration: underline;
     font-size: 1.2rem; }
@@ -125,8 +160,6 @@ h1, h2, h3, h4, h5, h6 {
   .title-box h1 {
     color: #fff;
     font-size: 5rem; }
-  .title-box:hover {
-    background-size: 0%, cover; }
   .title-box.location {
     border-bottom: 3px solid #e74c3c;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/ort-banner2.jpg");
@@ -147,6 +180,11 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 3px solid #16a085;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/presse.jpg");
     background-position: center; }
+  @media all and (max-width: 500px) {
+    .title-box {
+      min-height: 200px; }
+    .title-box h1 {
+      font-size: 3rem; } }
 
 .content {
   text-align: center;
@@ -204,6 +242,16 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 400px;
   height: 100%;
   width: 100%; }
+
+@media all and (max-width: 500px) {
+  .page .content {
+    -webkit-flex-flow: column-reverse;
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse; }
+  .map-col {
+    width: 100%; }
+  #map {
+    min-height: 200px; } }
 
 .address-box, .bus-box {
   display: -webkit-flex;
@@ -274,15 +322,24 @@ p {
   width: 60%; }
 
 .footer {
-  width: 100%; }
+  width: 90%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .footer .organizer {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
-  .footer .organizer h3 {
+    align-items: center;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2; }
+  .footer .organizer h3, .footer .social h3 {
     margin-left: 10px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -290,5 +347,23 @@ p {
   .footer .organizer a {
     color: #fff;
     text-decoration: none; }
+    .footer .organizer a.impress {
+      font-family: 'Open Sans', sans-serif;
+      /*text-align: center;*/
+      display: block;
+      margin-left: 10px; }
+  .footer .social h2 {
+    color: #fff;
+    font-size: 1.8rem; }
+  @media all and (max-width: 600px) {
+    .footer {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-top: 10px; }
+    .footer .social {
+      -webkit-order: -1;
+      -ms-flex-order: -1;
+      order: -1; } }
 
 /*# sourceMappingURL=app.css.map */
