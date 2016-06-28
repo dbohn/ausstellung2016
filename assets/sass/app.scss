@@ -318,7 +318,7 @@ h1, h2, h3, h4, h5, h6 {
 
     #map {
         min-height: 200px;
-        
+
     }
 }
 
@@ -391,6 +391,10 @@ p {
         .tools {
             color: $violet;
         }
+
+        .hobbyist {
+            color: $peter-river;
+        }
     }
 }
 
@@ -428,7 +432,7 @@ p {
     }
 
     .social {
-        
+
         & h2 {
             color: #fff;
             font-size: 1.8rem;
